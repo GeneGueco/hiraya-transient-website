@@ -338,25 +338,26 @@ footer {
   }
 
 /* ===== STICKY RESERVE BUTTON ===== */
+<style>
 #reserve-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #f5e6d3;
-  color: #a67c52;
-  padding: 12px 18px;
-  border-radius: 25px;
+  background-color: #a67c52;
+  color: #ffffff;
+  padding: 14px 20px;
+  border-radius: 30px;
   text-decoration: none;
   font-family: Arial, sans-serif;
-  font-size: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  font-size: 15px;
+  font-weight: bold;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.25);
   z-index: 9999;
   transition: all 0.3s ease;
 }
 
 #reserve-btn:hover {
-  background-color: #a67c52;
-  color: #fff;
+  background-color: #8c6239;
   transform: scale(1.05);
 }
 
@@ -370,3 +371,8 @@ footer {
     border-radius: 12px;
   }
 }
+</style>
+
+<a id="reserve-btn" href="https://genegueco.github.io/hiraya-transient-website" target="_blank">
+  🛎️ Reserve Now
+</a>
