@@ -1,76 +1,306 @@
-
-
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin: 0;
-    background-color: #f5f5f5;
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(to right, #8b6f47, #a8895a);
-    color: white;
-    text-align: center;
-    padding: 25px;
+body {
+  background-color: #f5f5f5;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: #a67c52;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f5e6d3;
+}
+
+.btn-reserve {
+  background: #f5e6d3;
+  color: #5c4033 !important;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
 }
 
 /* HERO */
 .hero {
-    text-align: center;
-    padding: 60px 20px;
-    background: #e6d5c3;
+  text-align: center;
+  padding: 80px 20px;
+  background: #e6d5c3;
 }
 
-/* SECTIONS */
+.hero h2 {
+  font-size: 32px;
+}
+
+/* GENERAL SECTIONS */
 section {
-    padding: 30px;
-    margin: 20px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 60px 30px;
+  margin: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* WELCOME SECTION */
+.welcome {
+  position: relative;
+  background: #8aa39b;
+  padding: 120px 20px 200px;
+  overflow: hidden;
+}
+
+/* BIG BACKGROUND TEXT */
+.welcome-bg-text {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 100px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: bold;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tagline {
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 3px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 40px;
+}
+
+/* CARD */
+.welcome-card {
+  position: relative;
+  background: #f3f3f3;
+  max-width: 700px;
+  margin: 80px auto 0;
+  padding: 40px;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* TEXT */
+.welcome-card h3 {
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.welcome-card p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* OPTIONAL IMAGE UNDER */
+.welcome::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background: url('../images/welcomebg.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .welcome-bg-text {
+    font-size: 60px;
+  }
+
+  .welcome-card {
+    padding: 25px;
+  }
+}
+
+/* ABOUT (FULL WIDTH FIX) */
+.about-us {
+  background: #e9e9e9;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* BANNER */
+.about-banner {
+  background: url('../images/aboutbg.jpg') center/cover no-repeat;
+  height: 280px;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+.about-banner h1 {
+  color: white;
+  font-size: 64px;
+}
+
+/* CONTENT */
+.about-content-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.about-text {
+  max-width: 650px;
+}
+
+.about-text h3 {
+  letter-spacing: 3px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.about-text p {
+  margin-bottom: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* SIGNATURE */
+.signature {
+  /* This tries the Mac cursive, then the Windows cursive, then the generic */
+  font-family: "Segoe Script", "Apple Chancery", cursive;
+  font-size: 28px;
+  margin-top: 20px;
+  font-style: italic; /* Forces it to lean more like handwriting */
 }
 
 /* GALLERY */
 .gallery {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .gallery img {
-    width: 80%;
-    max-width: 600px;
-    border-radius: 12px;
-    transition: transform 0.3s;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 12px;
+  transition: transform 0.3s;
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* FEATURES */
 .features .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .card {
-    background: #f0e6dc;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
+  background: #f0e6dc;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
 }
 
 /* CONTACT */
 .contact {
-    text-align: center;
+  text-align: center;
+  line-height: 1.8;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    background: #333;
-    color: white;
-    padding: 15px;
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #a67c52;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .about-banner {
+    height: 180px;
+    padding: 20px;
+  }
+
+  .about-banner h1 {
+    font-size: 36px;
+  }
+
+  .features .cards {
+    grid-template-columns: 1fr;
+  }
 }
