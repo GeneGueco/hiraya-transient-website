@@ -304,7 +304,8 @@ footer {
     grid-template-columns: 1fr;
   }
 }
-{
+/* ===== STICKY RESERVE BUTTON ===== */
+#reserve-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -317,11 +318,55 @@ footer {
   font-size: 14px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   z-index: 9999;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
-#github-btn:hover {
-  background-color: #a50a0b;
+
+#reserve-btn:hover {
+  background-color: #a67c52;
+  color: #fff;
+  transform: scale(1.05);
 }
-</style>
-  👉RESERVE NOW!
-</a>
+
+/* Mobile full width */
+@media (max-width: 768px) {
+  #reserve-btn {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+    border-radius: 12px;
+  }
+
+/* ===== STICKY RESERVE BUTTON ===== */
+#reserve-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f5e6d3;
+  color: #a67c52;
+  padding: 12px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+#reserve-btn:hover {
+  background-color: #a67c52;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Mobile full width */
+@media (max-width: 768px) {
+  #reserve-btn {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    text-align: center;
+    border-radius: 12px;
+  }
+}
