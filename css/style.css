@@ -362,7 +362,7 @@ footer {
 }
 
 /* Mobile full width */
-@media (max-width: 768px) {
+@media (max-width: 400px) {
   #reserve-btn {
     left: 10px;
     right: 10px;
