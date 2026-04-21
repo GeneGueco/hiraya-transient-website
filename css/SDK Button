@@ -1,0 +1,25 @@
+<style>
+#github-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f5e6d3;
+  color: #a67c52;
+  padding: 12px 18px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 9999;
+  transition: 0.3s;
+}
+#github-btn:hover {
+  background-color: #a50a0b;
+}
+</style>
+
+<a id="github-btn" href="https://genegueco.github.io/hiraya-transient-website" target="_blank">
+  👉RESERVE NOW!
+</a>
+
